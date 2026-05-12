@@ -1,4 +1,5 @@
 import Image from "next/image";
+import ContactSystem from "./ContactSystem";
 
 const machines = [
   {
@@ -65,31 +66,13 @@ const machines = [
 
 export default function Home() {
   return (
-    <main style={{ background: "#f0f2f7", minHeight: "100dvh" }}>
-      <div
-        style={{
-          maxWidth: 480,
-          margin: "0 auto",
-          minHeight: "100dvh",
-          display: "flex",
-          flexDirection: "column",
-        }}
-      >
-        {/* ── Header ── */}
-        <header
-          style={{
-            background: "#0f1f3d",
-            padding: "20px 20px 20px",
-          }}
-        >
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: 12,
-              marginBottom: 10,
-            }}
-          >
+    <main className="bg-[#f0f2f7] min-h-dvh flex flex-col">
+
+      {/* ── Full-width header ── */}
+      <header className="bg-[#0f1f3d] w-full">
+        <div className="max-w-300 mx-auto px-6 pt-4.5 pb-4">
+          <div className="flex flex-col lg:flex-row justify-center items-center  gap-3.5 mb-2.5">
+
             {/* Hexagon logomark */}
             <svg
               width="40"
@@ -97,7 +80,7 @@ export default function Home() {
               viewBox="0 0 46 46"
               fill="none"
               aria-label="Tramar Industries"
-              style={{ flexShrink: 0 }}
+              className="shrink-0"
             >
               <polygon
                 points="23,3 42,13 42,33 23,43 4,33 4,13"
@@ -119,165 +102,64 @@ export default function Home() {
               </text>
             </svg>
 
-            <div>
-              <div
-                style={{
-                  color: "white",
-                  fontWeight: 900,
-                  fontSize: 24,
-                  lineHeight: 1,
-                  letterSpacing: "-0.04em",
-                }}
-              >
+            <div className="hidden lg:flex flex-col items-start gap-[-0.15em] leading-none">
+              <div className="text-white font-black text-2xl leading-none tracking-[-0.04em]">
                 TRAMAR
               </div>
-              <div
-                style={{
-                  color: "#4a9eff",
-                  fontWeight: 600,
-                  fontSize: 10,
-                  letterSpacing: "0.2em",
-                }}
-              >
+              <div className="text-[#4a9eff] font-semibold text-[10px] tracking-[0.2em]">
                 INDUSTRIES
               </div>
             </div>
 
-            {/* Badge */}
-            <div
-              style={{
-                marginLeft: "auto",
-                display: "flex",
-                alignItems: "center",
-                gap: 6,
-                background: "rgba(255,255,255,0.07)",
-                border: "1px solid rgba(74,158,255,0.2)",
-                borderRadius: 20,
-                padding: "5px 10px",
-              }}
-            >
-              <span
-                style={{
-                  width: 7,
-                  height: 7,
-                  borderRadius: "50%",
-                  background: "#4ade80",
-                  flexShrink: 0,
-                }}
-              />
-              <span
-                style={{
-                  color: "#a0c4f0",
-                  fontSize: 11,
-                  fontWeight: 600,
-                }}
-              >
-                10 disponibles
-              </span>
-            </div>
+            
+            <ContactSystem />
           </div>
 
-          <p
-            style={{
-              color: "#6a90be",
-              fontSize: 13,
-              margin: 0,
-            }}
-          >
+          <p className="text-[#6a90be] text-xl mx-auto lg:mx-0 px-8 lg:px-0 text-center max-w-2xl lg:text-left">
             Mayor inventario CNC seminuevo en México
           </p>
-        </header>
+        </div>
+      </header>
+
+      {/* ── Content ── */}
+      <div className="max-w-300 mx-auto w-full flex-1 flex flex-col px-4">
 
         {/* ── Section label ── */}
-        <div style={{ padding: "14px 12px 6px" }}>
-          <p
-            style={{
-              color: "#8a9bbf",
-              fontSize: 11,
-              fontWeight: 600,
-              textTransform: "uppercase",
-              letterSpacing: "0.12em",
-              margin: 0,
-            }}
-          >
+        <div className="pt-3.5 pb-1.5">
+          <p className="text-[#8a9bbf] text-lg font-semibold uppercase tracking-[0.12em] m-0">
             Inventario actual
           </p>
         </div>
 
         {/* ── Machine grid ── */}
-        <section
-          style={{ padding: "0 10px", flex: 1 }}
-          aria-label="Catálogo de máquinas"
-        >
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "1fr 1fr",
-              gap: 10,
-            }}
-          >
+        <section className="flex-1" aria-label="Catálogo de máquinas">
+          <div className="grid grid-cols-2 gap-2.5 md:grid-cols-3 md:gap-4 xl:grid-cols-4 xl:gap-5">
             {machines.map((machine) => (
               <a
                 key={machine.id}
                 href={machine.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="machine-card"
-                style={{
-                  display: "block",
-                  background: "white",
-                  borderRadius: 14,
-                  overflow: "hidden",
-                  boxShadow:
-                    "0 1px 3px rgba(15,31,61,0.07), 0 4px 12px rgba(15,31,61,0.06)",
-                  textDecoration: "none",
-                  color: "inherit",
-                  WebkitTapHighlightColor: "transparent",
-                }}
+                className="machine-card block bg-white rounded-[14px] overflow-hidden shadow-[0_1px_3px_rgba(15,31,61,0.07),0_4px_12px_rgba(15,31,61,0.06)] no-underline text-inherit"
               >
                 {/* Image */}
-                <div
-                  style={{
-                    position: "relative",
-                    height: 140,
-                    background: "#e8edf5",
-                  }}
-                >
+                <div className="relative h-35 bg-[#e8edf5]">
                   <Image
                     src={machine.image}
                     alt={machine.name}
                     fill
-                    sizes="(max-width: 480px) 50vw, 240px"
-                    style={{ objectFit: "cover" }}
+                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 300px"
+                    className="object-cover"
                     priority={machine.id <= 4}
                   />
                 </div>
 
                 {/* Card body */}
-                <div style={{ padding: "9px 10px 11px" }}>
-                  <h3
-                    style={{
-                      fontWeight: 700,
-                      fontSize: 11,
-                      color: "#0f1f3d",
-                      lineHeight: 1.35,
-                      margin: "0 0 9px",
-                      minHeight: "2.7em",
-                    }}
-                  >
+                <div className="pt-2.25 px-2.5 pb-2.75">
+                  <h3 className="font-bold text-[11px] lg:text-[16px] text-[#0f1f3d] leading-[1.35] mt-0 mb-2.25 min-h-[2.7em]">
                     {machine.name}
                   </h3>
-                  <div
-                    style={{
-                      background: "#0f3460",
-                      color: "white",
-                      fontSize: 11,
-                      fontWeight: 600,
-                      textAlign: "center",
-                      borderRadius: 7,
-                      padding: "6px 0",
-                    }}
-                  >
+                  <div className="bg-[#0f3460] text-white text-[14px] font-semibold text-center rounded-[7px] py-2 lg:py-3">
                     Ver detalles →
                   </div>
                 </div>
@@ -287,24 +169,12 @@ export default function Home() {
         </section>
 
         {/* ── CTA ── */}
-        <div style={{ padding: "20px 12px 36px" }}>
+        <div className="pt-5 pb-9">
           <a
             href="https://tramarindustries.com.mx/comprar/"
             target="_blank"
             rel="noopener noreferrer"
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              gap: 8,
-              background: "#0f1f3d",
-              color: "white",
-              borderRadius: 14,
-              padding: "17px 20px",
-              fontWeight: 700,
-              fontSize: 16,
-              textDecoration: "none",
-            }}
+            className="flex items-center justify-center gap-2 bg-[#0f1f3d] text-white rounded-[14px] py-4.25 px-5 font-bold text-base no-underline"
           >
             Ver catálogo completo
             <svg
@@ -323,17 +193,11 @@ export default function Home() {
               />
             </svg>
           </a>
-          <p
-            style={{
-              textAlign: "center",
-              marginTop: 10,
-              fontSize: 12,
-              color: "#9aa8c0",
-            }}
-          >
+          <p className="text-center mt-2.5 text-[12px] text-[#9aa8c0]">
             tramarindustries.com.mx
           </p>
         </div>
+
       </div>
     </main>
   );
