@@ -1,6 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { collection, addDoc, serverTimestamp } from "firebase/firestore";
+import { db } from "@/lib/firebase";
 
 const MEXICAN_STATES = [
   "Aguascalientes", "Baja California", "Baja California Sur", "Campeche",
@@ -84,6 +86,15 @@ export default function ContactSystem() {
         body: JSON.stringify(form),
       });
       if (!res.ok) throw new Error("Error");
+      // Save lead to Firestore for admin dashboard
+      try {
+        await addDoc(collection(db, "contacts"), {
+          ...form,
+          sentAt: serverTimestamp(),
+        });
+      } catch {
+        // Silently ignore — email was already sent
+      }
       setStatus("success");
     } catch {
       setStatus("error");
