@@ -4,6 +4,8 @@ import Link from "next/link";
 import { useState, useEffect, useRef, useCallback } from "react";
 import MachineCard, { type CardMachine } from "../../components/MachineCard";
 import CatalogCTA from "../../components/CatalogCTA";
+import { doc, setDoc, increment, serverTimestamp } from "firebase/firestore";
+import { db } from "@/lib/firebase";
 
 const WA_PHONE = "524424674538";
 
@@ -21,6 +23,24 @@ type MachineDetail = {
   images?: string[];
   highlights?: string[];
 };
+
+async function trackWAClick(machineName: string, stock: string) {
+  try {
+    await setDoc(
+      doc(db, "waClicks", stock),
+      {
+        machine: machineName,
+        stock,
+        count: increment(1),
+        lastClickAt: serverTimestamp(),
+        label: `Click en ${machineName} para whatsapp`,
+      },
+      { merge: true }
+    );
+  } catch {
+    // silently ignore
+  }
+}
 
 function waLink(machine: MachineDetail) {
   const text = encodeURIComponent(
@@ -299,6 +319,7 @@ function CTAPanel({ machine }: { machine: MachineDetail }) {
           href={waLink(machine)}
           target="_blank"
           rel="noopener noreferrer"
+          onClick={() => void trackWAClick(machine.title, machine.stock)}
           className="flex items-center justify-center gap-2.5 bg-[#25D366] hover:bg-[#1da851] text-white! font-bold py-3.5 px-5 rounded-xl transition-colors shadow-[0_2px_12px_rgba(37,211,102,0.3)]"
         >
           <svg viewBox="0 0 24 24" className="w-5 h-5 fill-current shrink-0">

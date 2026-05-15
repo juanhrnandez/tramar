@@ -2488,7 +2488,7 @@
       "category_id": 2,
       "category_name": "Centros de Mecanizado CNC",
       "category_slug": "2-cnc-machining-centers",
-      "image_url": null,
+      "image_url": "https://machine-hub-prod.s3.amazonaws.com/machine-listing-images/91a506bb0c4f3151809f6b33ce54742a-9fb5c0b921e1cb22c335ddba9265ce35.jpg",
       "machine_slug": "dr250051/2017-brother-r650x-1",
       "specs": {
         "CNC Control": "Yes",

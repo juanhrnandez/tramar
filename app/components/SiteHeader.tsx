@@ -2,6 +2,26 @@
 
 import Link from "next/link";
 import { useState, useEffect, useRef, useCallback } from "react";
+import { doc, setDoc, increment, serverTimestamp } from "firebase/firestore";
+import { db } from "@/lib/firebase";
+
+async function trackHeaderWAClick() {
+  try {
+    await setDoc(
+      doc(db, "waClicks", "__header__"),
+      {
+        machine: "Header (general)",
+        stock: "__header__",
+        count: increment(1),
+        lastClickAt: serverTimestamp(),
+        label: "Click en header para whatsapp",
+      },
+      { merge: true }
+    );
+  } catch {
+    // silently ignore
+  }
+}
 
 const WA_PHONE = "524424674538";
 const WA_DEFAULT_MSG = encodeURIComponent(
@@ -342,6 +362,7 @@ export default function SiteHeader() {
             href={`https://api.whatsapp.com/send?phone=${WA_PHONE}&text=${WA_DEFAULT_MSG}`}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => void trackHeaderWAClick()}
             aria-label="Contáctanos por WhatsApp"
             className="w-10 h-10 bg-[#25D366] hover:bg-[#1da851] rounded-xl flex items-center justify-center transition-colors shrink-0"
           >

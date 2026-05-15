@@ -22,7 +22,20 @@ import json
 import re
 import sys
 import time
+import urllib.request
 from pathlib import Path
+
+MIN_IMAGE_SIZE = 10 * 1024  # 10 KB
+
+
+def image_size(url: str) -> int:
+    """Return Content-Length of a URL in bytes, or 0 on error."""
+    try:
+        req = urllib.request.Request(url, method="HEAD")
+        with urllib.request.urlopen(req, timeout=10) as resp:
+            return int(resp.headers.get("Content-Length", 0))
+    except Exception:
+        return 0
 
 BASE_URL = "https://prod--tramar-prod.us-east5.hosted.app/machine/"
 DATA_DIR = Path(__file__).parent.parent / "public" / "data"
@@ -71,14 +84,22 @@ def scrape_machine(page, stock: str, slug: str) -> dict:
     description = desc_el.inner_text().strip() if desc_el else ""
 
     # Images — CDN URLs converted to S3
+    # Scope to the main product gallery only (.swiper-product-main) to avoid
+    # capturing images from related products or other page sections.
     images = []
     seen = set()
-    for img in page.query_selector_all('img[src*="cdn.machinehub"]'):
+    gallery_imgs = page.query_selector_all('.swiper-product-main img[src*="cdn.machinehub"]')
+    # Fallback to all cdn imgs if gallery container not found (edge case)
+    if not gallery_imgs:
+        gallery_imgs = page.query_selector_all('img[src*="cdn.machinehub"]')
+    for img in gallery_imgs:
         src = img.get_attribute("src") or ""
         if not src:
             continue
         s3 = cdn_to_s3(src)
         if s3 not in seen:
+            if image_size(s3) < MIN_IMAGE_SIZE:
+                continue
             seen.add(s3)
             images.append(s3)
 

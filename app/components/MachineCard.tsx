@@ -44,7 +44,7 @@ async function trackWAClick(machineName: string, stock: string) {
         stock,
         count: increment(1),
         lastClickAt: serverTimestamp(),
-        label: `Click whatsapp para maquina ${machineName}`,
+        label: `Click en ${machineName} para whatsapp`,
       },
       { merge: true }
     );
