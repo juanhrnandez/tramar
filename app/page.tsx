@@ -1,127 +1,89 @@
-import ContactSystem from "./ContactSystem";
+import fs from "fs";
+import path from "path";
+import Link from "next/link";
 import VisitorTracker from "./components/VisitorTracker";
 import MachineGrid from "./components/MachineGrid";
+import type { CardMachine } from "./components/MachineCard";
 
-const machines = [
-  {
-    id: 1,
-    name: "2008 DOOSAN Puma 2000SY",
-    image: "/2008-doosan-puma-2000SY.jpeg",
-    url: "https://prod--tramar-prod.us-east5.hosted.app/machine/15369/2008-doosan-puma-2000sy",
-  },
-  {
-    id: 2,
-    name: "2012 HAAS VF-2",
-    image: "/2012-HAAS-VF-2.jpeg",
-    url: "https://prod--tramar-prod.us-east5.hosted.app/machine/15242/2012-haas-vf-2",
-  },
-  {
-    id: 3,
-    name: "2011 HAAS ST-10",
-    image: "/2011-HAAS-ST-10.jpeg",
-    url: "https://prod--tramar-prod.us-east5.hosted.app/machine/15370/2011-haas-st-10",
-  },
-  {
-    id: 4,
-    name: "2011 HAAS VF-3",
-    image: "/2011-HAASVF-3.jpeg",
-    url: "https://prod--tramar-prod.us-east5.hosted.app/machine/15371-1/2011-haas-vf-3",
-  },
-  {
-    id: 5,
-    name: "2011 SAMSUNG SL20/500",
-    image: "/2011-SAMSUNG-SL20-500.jpeg",
-    url: "https://prod--tramar-prod.us-east5.hosted.app/machine/15318/2011-samsung-sl20500",
-  },
-  {
-    id: 6,
-    name: "2005 DOOSAN Puma 2000SY",
-    image: "/2005DOOSANPUMA-2000SY.jpeg",
-    url: "https://prod--tramar-prod.us-east5.hosted.app/machine/15368/2005-doosan-daewoo-puma-2000sy",
-  },
-  {
-    id: 7,
-    name: "2005 YCM XV-1020A",
-    image: "/2005YCMXV-1020A.jpeg",
-    url: "https://prod--tramar-prod.us-east5.hosted.app/machine/15327/2005-ycm-xv-1020a",
-  },
-  {
-    id: 8,
-    name: "2007 YAMA SEIKI VMB-1020",
-    image: "/2007YAMA-SEIKI-VMB-1020.jpeg",
-    url: "https://prod--tramar-prod.us-east5.hosted.app/machine/14503/2007-yama-seiki-vmb-1020",
-  },
-  {
-    id: 9,
-    name: "2006 DOOSAN Puma 300C",
-    image: "/2006-DOOSANPUMA-300C.jpeg",
-    url: "https://prod--tramar-prod.us-east5.hosted.app/machine/15304/2006-doosan-puma-300c",
-  },
-  {
-    id: 10,
-    name: "2017 DMG MORI CMX 50U",
-    image: "/2017DMG-MORI-CMX-50U.jpeg",
-    url: "https://prod--tramar-prod.us-east5.hosted.app/machine/14255/2017-dmg-mori-cmx-50u",
-  },
+// ─── Local (high-quality) images for the 10 featured machines ───────────────
+const LOCAL_MACHINES: Array<{
+  stock: string;
+  title: string;
+  year: string;
+  brand: string;
+  model: string;
+  category_name: string;
+  image: string;
+}> = [
+  { stock: "15369", title: "2008 DOOSAN Puma 2000SY", year: "2008", brand: "DOOSAN", model: "Puma 2000SY", category_name: "Tornos CNC", image: "/2008-doosan-puma-2000SY.jpeg" },
+  { stock: "15242", title: "2012 HAAS VF-2", year: "2012", brand: "HAAS", model: "VF-2", category_name: "Centros de Maquinado", image: "/2012-HAAS-VF-2.jpeg" },
+  { stock: "15370", title: "2011 HAAS ST-10", year: "2011", brand: "HAAS", model: "ST-10", category_name: "Tornos CNC", image: "/2011-HAAS-ST-10.jpeg" },
+  { stock: "15371", title: "2011 HAAS VF-3", year: "2011", brand: "HAAS", model: "VF-3", category_name: "Centros de Maquinado", image: "/2011-HAASVF-3.jpeg" },
+  { stock: "15318", title: "2011 SAMSUNG SL20/500", year: "2011", brand: "SAMSUNG", model: "SL20/500", category_name: "Tornos CNC", image: "/2011-SAMSUNG-SL20-500.jpeg" },
+  { stock: "15368", title: "2005 DOOSAN Puma 2000SY", year: "2005", brand: "DOOSAN", model: "Puma 2000SY", category_name: "Tornos CNC", image: "/2005DOOSANPUMA-2000SY.jpeg" },
+  { stock: "15327", title: "2005 YCM XV-1020A", year: "2005", brand: "YCM", model: "XV-1020A", category_name: "Centros de Maquinado", image: "/2005YCMXV-1020A.jpeg" },
+  { stock: "14503", title: "2007 YAMA SEIKI VMB-1020", year: "2007", brand: "YAMA SEIKI", model: "VMB-1020", category_name: "Centros de Maquinado", image: "/2007YAMA-SEIKI-VMB-1020.jpeg" },
+  { stock: "15304", title: "2006 DOOSAN Puma 300C", year: "2006", brand: "DOOSAN", model: "Puma 300C", category_name: "Tornos CNC", image: "/2006-DOOSANPUMA-300C.jpeg" },
+  { stock: "14255", title: "2017 DMG MORI CMX 50U", year: "2017", brand: "DMG MORI", model: "CMX 50U", category_name: "Centros de Maquinado", image: "/2017DMG-MORI-CMX-50U.jpeg" },
 ];
 
+const FEATURED_STOCKS = new Set(LOCAL_MACHINES.map((m) => m.stock));
+
+function loadDetailImages(stock: string): string[] {
+  try {
+    const p = path.join(process.cwd(), "public", "data", "machines", `${stock}.json`);
+    const raw = JSON.parse(fs.readFileSync(p, "utf-8"));
+    return Array.isArray(raw.images) ? raw.images.slice(0, 8) : [];
+  } catch {
+    return [];
+  }
+}
+
+function buildHomeMachines(): CardMachine[] {
+  // 1. Build the 10 featured machines, enriching with carousel images from detail files
+  const featured: CardMachine[] = LOCAL_MACHINES.map((m) => {
+    const detailImages = loadDetailImages(m.stock);
+    const images = detailImages.length > 0 ? detailImages : [m.image];
+    return { stock: m.stock, title: m.title, year: m.year, brand: m.brand, model: m.model, category_name: m.category_name, images };
+  });
+
+  // 2. Load 10 more from the catalog (skip featured stocks, pick those with images)
+  const extra: CardMachine[] = [];
+  try {
+    const raw = JSON.parse(
+      fs.readFileSync(path.join(process.cwd(), "public", "data", "machines.json"), "utf-8")
+    );
+    for (const m of raw.machines as Array<{
+      stock: string; title: string; year: string | null; brand: string | null;
+      model: string | null; category_name: string; image_url: string | null;
+    }>) {
+      if (FEATURED_STOCKS.has(m.stock)) continue;
+      const detailImages = loadDetailImages(m.stock);
+      const fallback = m.image_url ? [m.image_url] : [];
+      const images = detailImages.length > 0 ? detailImages : fallback;
+      if (!images.length) continue;
+      extra.push({ stock: m.stock, title: m.title, year: m.year, brand: m.brand, model: m.model, category_name: m.category_name, images });
+      if (extra.length === 10) break;
+    }
+  } catch {}
+
+  return [...featured, ...extra];
+}
+
 export default function Home() {
+  const machines = buildHomeMachines();
   return (
     <main className="bg-[#f0f2f7] min-h-dvh flex flex-col">
       <VisitorTracker />
 
-      {/* ── Full-width header ── */}
-      <header className="bg-[#0f1f3d] w-full">
-        <div className="max-w-300 mx-auto px-6 pt-4.5 pb-4">
-          <div className="flex flex-col lg:flex-row justify-center items-center  gap-3.5 mb-2.5">
-
-            {/* Hexagon logomark */}
-            <svg
-              width="40"
-              height="40"
-              viewBox="0 0 46 46"
-              fill="none"
-              aria-label="Tramar Industries"
-              className="shrink-0"
-            >
-              <polygon
-                points="23,3 42,13 42,33 23,43 4,33 4,13"
-                fill="#162e5a"
-                stroke="#4a9eff"
-                strokeWidth="1.5"
-              />
-              <text
-                x="23"
-                y="30"
-                textAnchor="middle"
-                fill="white"
-                fontSize="17"
-                fontWeight="900"
-                fontFamily="Arial, sans-serif"
-                letterSpacing="-0.5"
-              >
-                T
-              </text>
-            </svg>
-
-            <div className="hidden lg:flex flex-col items-start gap-[-0.15em] leading-none">
-              <div className="text-white font-black text-2xl leading-none tracking-[-0.04em]">
-                TRAMAR
-              </div>
-              <div className="text-[#4a9eff] font-semibold text-[10px] tracking-[0.2em]">
-                INDUSTRIES
-              </div>
-            </div>
-
-            
-            <ContactSystem />
-          </div>
-
-          <p className="text-[#6a90be] text-xl mx-auto lg:mx-0 px-8 lg:px-0 text-center max-w-2xl lg:text-left">
+      {/* ── Hero tagline ── */}
+      <div className="bg-[#0f1f3d] w-full">
+        <div className="max-w-300 mx-auto px-6 py-3">
+          <p className="text-[#6a90be] text-base m-0 text-center lg:text-left">
             Mayor inventario CNC seminuevo en México
           </p>
         </div>
-      </header>
+      </div>
 
       {/* ── Content ── */}
       <div className="max-w-300 mx-auto w-full flex-1 flex flex-col px-4">
@@ -138,13 +100,11 @@ export default function Home() {
 
         {/* ── CTA ── */}
         <div className="pt-5 pb-9">
-          <a
-            href="https://tramarindustries.com.mx/comprar/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2 bg-[#0f1f3d] text-white rounded-[14px] py-4.25 px-5 font-bold text-base no-underline"
+          <Link
+            href="/catalogo"
+            className="flex items-center justify-center gap-2 bg-[#0f1f3d] !text-white rounded-[14px] py-4.25 px-5 font-bold text-base no-underline"
           >
-            Ver catálogo completo
+          Ver catálogo completo ({206} máquinas)
             <svg
               width="18"
               height="18"
@@ -160,9 +120,9 @@ export default function Home() {
                 strokeLinejoin="round"
               />
             </svg>
-          </a>
+          </Link>
           <p className="text-center mt-2.5 text-[12px] text-[#9aa8c0]">
-            tramarindustries.com.mx
+            Tornos · CNC · Rectificadoras · EDM y más
           </p>
         </div>
 

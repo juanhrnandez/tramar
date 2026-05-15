@@ -1,0 +1,30 @@
+{
+  "id": "dr250051",
+  "stock": "DR250051",
+  "title": "2017 BROTHER R650X-1",
+  "year": "2017",
+  "brand": "BROTHER",
+  "model": "R650X-1",
+  "category_id": 2,
+  "category_name": "Centros de Mecanizado CNC",
+  "category_slug": "2-cnc-machining-centers",
+  "image_url": null,
+  "machine_slug": "dr250051/2017-brother-r650x-1",
+  "specs": {
+    "CNC Control": "Yes",
+    "Type Of CNC Control": "Brother CNC-C00",
+    "# Axis": "3",
+    "Table Size": "31.5\" x 15.75\"",
+    "Table Capacity": "661 pounds",
+    "X": "25.59 inches",
+    "Y": "15.75 inches",
+    "Z": "12.00 inches",
+    "Taper": "BT 30",
+    "Spindle Speed": "10,000 rpm",
+    "# ATC": "22",
+    "Coolant Thru Spindle": "Yes",
+    "Weight": "7716 pounds"
+  },
+  "description": "The BROTHER R650X-1 is an exclusive part of our Drilling & Tapping Centers inventory which we own and service. We're the international CNC specialists with the best guarantee in the industry.",
+  "images": []
+}

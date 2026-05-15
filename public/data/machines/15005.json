@@ -1,0 +1,42 @@
+{
+  "id": "15005",
+  "stock": "15005",
+  "title": "2012 ACER EVS-3VKH-54",
+  "year": "2012",
+  "brand": "ACER",
+  "model": "EVS-3VKH-54",
+  "category_id": 3,
+  "category_name": "Mandrinado y Fresado",
+  "category_slug": "3-boring-milling-drilling",
+  "image_url": "https://machine-hub-prod.s3.amazonaws.com/machine-listing-images/fd19479b38208dc63188090a08f461b2-e57c5afade509e51324bd5957f1c5df6.jpg",
+  "machine_slug": "15005/2012-acer-evs-3vkh-54",
+  "specs": {
+    "Table Size": "54\" x 10\"",
+    "Table Travel": "36.5\"",
+    "SaddleTravel": "17\"",
+    "Knee Travel": "19\"",
+    "Ram Travel": "20\"",
+    "Max Quill Travel": "5\"",
+    "Spindle Taper": "R-8",
+    "Spindle Speed (RPM)": "4,500 rpm",
+    "Spindle Motor": "3 hp",
+    "Head Tilt": "45° Tilt Front to Back | 90° Tilt Left to Right",
+    "Weight": "3500 pounds"
+  },
+  "description": "The ACER EVS-3VKH-54 is an exclusive part of our Millers, Knee, CNC inventory which we own and service. We're the international CNC specialists with the best guarantee in the industry.",
+  "images": [
+    "https://machine-hub-prod.s3.amazonaws.com/machine-listing-images/fd19479b38208dc63188090a08f461b2-e57c5afade509e51324bd5957f1c5df6.jpg",
+    "https://machine-hub-prod.s3.amazonaws.com/machine-listing-images/1833ac47b85928f3b36d2676ca9df03a-44cc1ee41ed546f06581187b9564c298.jpg",
+    "https://machine-hub-prod.s3.amazonaws.com/machine-listing-images/e8933c950c082b83f8e22b700c0a9015-e38ce807dbfaf640822ea15f84f2cf54.jpg",
+    "https://machine-hub-prod.s3.amazonaws.com/machine-listing-images/cbec56ea8d7b1d9787f7c1297488c798-948631375b92adc4480c213c41f118fe.jpg",
+    "https://machine-hub-prod.s3.amazonaws.com/machine-listing-images/1b12189170921fa4ac5414db98f542de-4499b6f4c355b3db90376232ae972fd2.jpg",
+    "https://machine-hub-prod.s3.amazonaws.com/machine-listing-images/606c28d38c9bd4e7b26a1f73f28a9e4b-462c3dd83de124badfb139d960090d64.jpg",
+    "https://machine-hub-prod.s3.amazonaws.com/machine-listing-images/fc60881482701eecdb18102735fc2308-7cdaa6eeb9774b8149556867e2bbaf76.jpg",
+    "https://machine-hub-prod.s3.amazonaws.com/machine-listing-images/ebe003dcb3d0a01d56a93bb5a41509cb-56561e6a0faacf2a9226d50d972bff63.jpg",
+    "https://machine-hub-prod.s3.amazonaws.com/machine-listing-images/ca7f3d37b2540b00d99e2310903e7cd8-bbd6cda986b3b6a005c2446c7719ff6d.jpg",
+    "https://machine-hub-prod.s3.amazonaws.com/machine-listing-images/bf87121bf0375fe8077a415dbfe6fec8-0cf681ade0793c619df3db408674ef60.jpg",
+    "https://machine-hub-prod.s3.amazonaws.com/machine-listing-images/b55222ebb0b6a9367ea1a7fb000836d8-553756e9a508e33f842328241e6c39f7.jpg",
+    "https://machine-hub-prod.s3.amazonaws.com/machine-listing-images/3590f3fb8afe58d458f358b517f9a3e0-aac6b02e7c24a4b749817bea378d2971.jpg",
+    "https://cdn.machinehub.com/machine-listing-images/5e64d2bc18d28b47069ddfcaebdeb8be-0526c9427ecf7c74394aa7ddcda82948.jpg"
+  ]
+}

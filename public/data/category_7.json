@@ -1,0 +1,78 @@
+{
+  "category_id": 7,
+  "category_name": "Fabricación y Lámina",
+  "category_slug": "7-fabrication-sheet-metal",
+  "total": 5,
+  "machines": [
+    {
+      "id": "15373",
+      "stock": "15373",
+      "title": "2023 MILLUTENSIL BV.30E",
+      "year": "2023",
+      "brand": "MILLUTENSIL",
+      "model": "BV.30E",
+      "category_id": 7,
+      "category_name": "Fabricación y Lámina",
+      "category_slug": "7-fabrication-sheet-metal",
+      "image_url": "https://machine-hub-prod.s3.amazonaws.com/machine-listing-images/960e22c062e54ee98c07ce83a5e39cff-7d2ae64c419e36985c3f35f97e4bfe52.jpg",
+      "machine_slug": "15373/2023-millutensil-bv30e",
+      "specs": {}
+    },
+    {
+      "id": "md630e",
+      "stock": "MD630E",
+      "title": "2003 SCHMID HSR 630 Ecoline",
+      "year": "2003",
+      "brand": "SCHMID",
+      "model": "HSR 630 Ecoline",
+      "category_id": 7,
+      "category_name": "Fabricación y Lámina",
+      "category_slug": "7-fabrication-sheet-metal",
+      "image_url": "https://machine-hub-prod.s3.amazonaws.com/machine-listing-images/def405c93fa429646ff5be759b5b9ae8-c594324164674bec1d33dd3708453548.jpg",
+      "machine_slug": "md630e/2003-schmid-hsr-630-ecoline",
+      "specs": {}
+    },
+    {
+      "id": "md1000e",
+      "stock": "MD1000E",
+      "title": "2007 SCHMID HSR 1000 Ecoline",
+      "year": "2007",
+      "brand": "SCHMID",
+      "model": "HSR 1000 Ecoline",
+      "category_id": 7,
+      "category_name": "Fabricación y Lámina",
+      "category_slug": "7-fabrication-sheet-metal",
+      "image_url": "https://machine-hub-prod.s3.amazonaws.com/machine-listing-images/a06ebe1b56c3c05196e0d45ff0ad5808-4f751245852f784c29fdb0816ef5a4d2.jpg",
+      "machine_slug": "md1000e/2007-schmid-hsr-1000-ecoline",
+      "specs": {}
+    },
+    {
+      "id": "15046",
+      "stock": "15046",
+      "title": "2008 TRUMPF TruMark Station 5000",
+      "year": "2008",
+      "brand": "TRUMPF",
+      "model": "TruMark Station 5000",
+      "category_id": 7,
+      "category_name": "Fabricación y Lámina",
+      "category_slug": "7-fabrication-sheet-metal",
+      "image_url": null,
+      "machine_slug": "15046/2008-trumpf-trumark-station-5000",
+      "specs": {}
+    },
+    {
+      "id": "15060",
+      "stock": "15060",
+      "title": "2011 AEROGO 20T Transporter",
+      "year": "2011",
+      "brand": "AEROGO",
+      "model": "20T Transporter",
+      "category_id": 7,
+      "category_name": "Fabricación y Lámina",
+      "category_slug": "7-fabrication-sheet-metal",
+      "image_url": null,
+      "machine_slug": "15060/2011-aerogo-20t-transporter",
+      "specs": {}
+    }
+  ]
+}

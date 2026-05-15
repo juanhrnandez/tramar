@@ -1,0 +1,43 @@
+{
+  "id": "md69998",
+  "stock": "MD69998",
+  "title": "1998 TOSHIBA MACHINE BTD-110.R16",
+  "year": "1998",
+  "brand": "TOSHIBA",
+  "model": "MACHINE BTD-110.R16",
+  "category_id": 3,
+  "category_name": "Mandrinado y Fresado",
+  "category_slug": "3-boring-milling-drilling",
+  "image_url": "https://machine-hub-prod.s3.amazonaws.com/machine-listing-images/91bf87733c85c6054f3187c9027e7ff2-6f1d38cafa1b83b9915a742f8cb7c8dc.jpg",
+  "machine_slug": "md69998/1998-toshiba-machine-btd-110r16",
+  "specs": {
+    "CNC Control": "Yes",
+    "Type Of CNC Control": "Tosnuc 888",
+    "Spindle Diameter": "4.3\"",
+    "Table Size": "63\" x 55.1\"",
+    "Max Table Load": "13860 pounds",
+    "X-Axis Travel": "78.7 inches",
+    "Y-Axis Travel": "59.1 inches",
+    "Z-Axis Travel": "57.1 inches",
+    "W-Axis Travel": "19.7 inches",
+    "B-Axis (Pallet Indexing)": "0.001°",
+    "Spindle Taper": "CAT 50",
+    "Spindle Speed": "3,000 rpm",
+    "Spindle Motor": "20 hp",
+    "Tool Changer Capacity": "38",
+    "Coolant Thru Spindle": "Yes",
+    "Machine Weight": "61600 pounds"
+  },
+  "description": "The TOSHIBA MACHINE BTD-110.R16 is an exclusive part of our Boring Mills, Horizontal, Table Type, CNC inventory which we own and service. We're the international CNC specialists with the best guarantee in the industry.",
+  "images": [
+    "https://machine-hub-prod.s3.amazonaws.com/machine-listing-images/91bf87733c85c6054f3187c9027e7ff2-6f1d38cafa1b83b9915a742f8cb7c8dc.jpg",
+    "https://machine-hub-prod.s3.amazonaws.com/machine-listing-images/ab81265d898ef7f38a3e95fc98c2a669-4a0e1010497bd92d53098ffe309f5d5d.jpg",
+    "https://machine-hub-prod.s3.amazonaws.com/machine-listing-images/b8c236e96fe743f33c1137d9dd6510c8-9c5943518bab4cff48e58c98796ff8be.jpg",
+    "https://machine-hub-prod.s3.amazonaws.com/machine-listing-images/a292685556cdeb779dbc336e83dfb3cb-422845882f7762e55267aa5af353189e.jpg",
+    "https://machine-hub-prod.s3.amazonaws.com/machine-listing-images/ad834430749e78c48a6092f873a96dca-12e31331e3b13768f687d76bec771da9.jpg",
+    "https://machine-hub-prod.s3.amazonaws.com/machine-listing-images/e4bd04c70ceb80c8c6d544d75d235c8a-c16c546b5ce33ef986e2ef3b88dde9f1.jpg",
+    "https://machine-hub-prod.s3.amazonaws.com/machine-listing-images/dc149640eb3ff97ed2ece1fecee85026-8acc3216b7c0561c89fbc0bcd3c51450.jpg",
+    "https://cdn.machinehub.com/machine-listing-images/db81023343eaa4d8dc48082da14b2688-d03515496fb07afe2c2cf11fcfcbc26c.jpeg",
+    "https://cdn.machinehub.com/machine-listing-images/b33128cb0089003ddfb5199e1b679652-fc728d3303a014cc5ba832f586e5ebab.jpeg"
+  ]
+}

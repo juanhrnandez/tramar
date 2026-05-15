@@ -1,0 +1,42 @@
+{
+  "id": "k03325",
+  "stock": "K03325",
+  "title": "2015 TSUGAMI B0125 III",
+  "year": "2015",
+  "brand": "TSUGAMI",
+  "model": "B0125 III",
+  "category_id": 1,
+  "category_name": "Centros de Torneado",
+  "category_slug": "1-lathe-turning-centers",
+  "image_url": "https://machine-hub-prod.s3.amazonaws.com/machine-listing-images/0a2090e24b6ae62b0b0fcaa67a72b5a0-71e63c88f630ad3e51b96151c73b4a02.jpg",
+  "machine_slug": "k03325/2015-tsugami-b0125-iii",
+  "specs": {
+    "CNC Control": "Yes",
+    "Type Of CNC Control": "Fanuc 0i-TD",
+    "# Axis": "5",
+    "Live Tooling Speed": "8,000 rpm",
+    "Tailstock": "No",
+    "Y Axis": "Yes",
+    "Bar Feeder": "Yes",
+    "Sub Spindle": "Yes",
+    "Sub Spindle Speed": "12,000 rpm",
+    "Dimensions": "66\" x 45\" x 67\"",
+    "Weight": "4500 pounds"
+  },
+  "description": "The TSUGAMI B0125 III is an exclusive part of our Lathes, CNC, Automatic, Swiss Type inventory which we own and service. We're the international CNC specialists with the best guarantee in the industry.",
+  "images": [
+    "https://machine-hub-prod.s3.amazonaws.com/machine-listing-images/0a2090e24b6ae62b0b0fcaa67a72b5a0-71e63c88f630ad3e51b96151c73b4a02.jpg",
+    "https://machine-hub-prod.s3.amazonaws.com/machine-listing-images/3da0ebd4f5a8761349e32bf0802e9b06-71e63c88f630ad3e51b96151c73b4a02.jpg",
+    "https://machine-hub-prod.s3.amazonaws.com/machine-listing-images/003d859bbd84a526b9e06340ce7d185f-9e7970c0eb8819e1ef69eb382251f219.jpg",
+    "https://machine-hub-prod.s3.amazonaws.com/machine-listing-images/4c0376c96b01ba0891544089758a751b-13273d340049b2cb4cc5fead190f43d5.jpg",
+    "https://machine-hub-prod.s3.amazonaws.com/machine-listing-images/eea535b1631bd117dbcaaf5a0ea76bfc-5e5f55c57a5dc81dd95284d42908c88c.jpg",
+    "https://machine-hub-prod.s3.amazonaws.com/machine-listing-images/19b20d918b26f877ce5a1ad7f34b9729-75d522317feeb82a38915df5270ddceb.jpg",
+    "https://machine-hub-prod.s3.amazonaws.com/machine-listing-images/8b7f5d739331a762aa3aaaa02120f825-6612e52f9622fb961511933f5246a950.jpg",
+    "https://machine-hub-prod.s3.amazonaws.com/machine-listing-images/2207d4d03ac048e22aa8755e897ec3ee-2821af613e69a91444e320339352d8e7.jpg",
+    "https://cdn.machinehub.com/machine-listing-images/0afa92fc0f8a9cf051bf2961b06ac56b-71e63c88f630ad3e51b96151c73b4a02.jpg",
+    "https://cdn.machinehub.com/machine-listing-images/74dfdb12f3d2e5b6f1fab5f40d62c7f4-e06662420ea13a6efecfdd729f40d0b7.jpg",
+    "https://cdn.machinehub.com/machine-listing-images/243da4cdb96968e9feec0d79af4a6956-909c5d24c245a8d73d947cb02604b871.jpg",
+    "https://cdn.machinehub.com/machine-listing-images/d58b0b5c56b53be76e8104175a15ff97-edf1322771e2ccca1c281d06659f1fc4.jpg",
+    "https://machine-hub-prod.s3.amazonaws.com/machine-listing-images/88e71a1993534c0fa5327a63fdeb75bd-1d22f8300565ff7b2dd11f1c346bf081.jpg"
+  ]
+}

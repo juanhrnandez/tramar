@@ -1,0 +1,43 @@
+{
+  "id": "dr25042",
+  "stock": "DR25042",
+  "title": "2017 HEXAGON 7.10.7 SF",
+  "year": "2017",
+  "brand": "HEXAGON",
+  "model": "7.10.7 SF",
+  "category_id": 6,
+  "category_name": "Herramientas e Inspección",
+  "category_slug": "6-inspection-tooling-accessories",
+  "image_url": "https://machine-hub-prod.s3.amazonaws.com/machine-listing-images/9087cd8bfa9c1968b20d8f6d0b81cbbb-7fac842b8e0380327e9e9f5c41c4bcf1.jpg",
+  "machine_slug": "dr25042/2017-hexagon-7107-sf",
+  "specs": {
+    "CNC Control": "Yes",
+    "Type Of CNC Control": "PC DMIS",
+    "X": "28 inches",
+    "Y": "39.8 inches",
+    "Z": "26.8 inches"
+  },
+  "description": "The HEXAGON 7.10.7 SF is an exclusive part of our Coordinate Measuring Machines inventory which we own and service. We're the international CNC specialists with the best guarantee in the industry.",
+  "images": [
+    "https://machine-hub-prod.s3.amazonaws.com/machine-listing-images/9087cd8bfa9c1968b20d8f6d0b81cbbb-7fac842b8e0380327e9e9f5c41c4bcf1.jpg",
+    "https://machine-hub-prod.s3.amazonaws.com/machine-listing-images/8f1e7df4293adfa9cadbd5d2dfb933e7-79833e7e069f62ef1befae8ef0580b3f.jpg",
+    "https://machine-hub-prod.s3.amazonaws.com/machine-listing-images/83f0e5b0ed01b824894c5cfed80385e9-b1480ca7a98a1e52d4f870b31f249be5.jpg",
+    "https://machine-hub-prod.s3.amazonaws.com/machine-listing-images/bdd942359c5e07f43b0395343b3a6cb7-bfd8ab2465c3c7a5b582cfe0714edce2.jpg",
+    "https://machine-hub-prod.s3.amazonaws.com/machine-listing-images/18ce193a851d7e07837368f942deec06-79833e7e069f62ef1befae8ef0580b3f.jpg",
+    "https://machine-hub-prod.s3.amazonaws.com/machine-listing-images/c61e3e0e1fdf29fbe8f9b024b3e5c08e-1a77b4786c44effc9806e557600fa0dc.jpg",
+    "https://machine-hub-prod.s3.amazonaws.com/machine-listing-images/965f1d5473cb1cbbf02c4ca8cda6919d-c870878e0808fe371ae31fe1001c6b07.jpg",
+    "https://machine-hub-prod.s3.amazonaws.com/machine-listing-images/2252c7cd65dbe01a5f38ad6136c1c19f-ad7491712f339310f8159e09cf760e22.jpg",
+    "https://cdn.machinehub.com/machine-listing-images/ef2a342b42715bea9fb07e11523c0371-bfd8ab2465c3c7a5b582cfe0714edce2.jpg",
+    "https://cdn.machinehub.com/machine-listing-images/cb40a0110590291c622bae8f8f31371c-79833e7e069f62ef1befae8ef0580b3f.jpg",
+    "https://cdn.machinehub.com/machine-listing-images/30ea3d69405be8291554115d415c593d-7fac842b8e0380327e9e9f5c41c4bcf1.jpg",
+    "https://cdn.machinehub.com/machine-listing-images/68d7496649e857a0149ab0cdd40233e2-bfd8ab2465c3c7a5b582cfe0714edce2.jpg",
+    "https://cdn.machinehub.com/machine-listing-images/85ad02a7b97b3ebeaacc7cb3bf321405-79833e7e069f62ef1befae8ef0580b3f.jpg",
+    "https://cdn.machinehub.com/machine-listing-images/57e80e913cc33984ee1446ddafe6ba1c-1a77b4786c44effc9806e557600fa0dc.jpg",
+    "https://cdn.machinehub.com/machine-listing-images/75814c64e85b3353a7a71fcf0d3c4a2f-c870878e0808fe371ae31fe1001c6b07.jpg",
+    "https://cdn.machinehub.com/machine-listing-images/963172122a0c8dad5d8a9cf46f21f5e2-ad7491712f339310f8159e09cf760e22.jpg",
+    "https://cdn.machinehub.com/machine-listing-images/9aa02312e6c6a1824841674166929129-154f9a171256426200839f2c3b67ca26.jpg",
+    "https://cdn.machinehub.com/machine-listing-images/bfd09da6fe6440b4e0b52f17ae6b99bc-fab566f97f22d6400f5ac5095fe39409.jpg",
+    "https://cdn.machinehub.com/machine-listing-images/31bd7cc9213175d709fcfa2eeb4b202a-f85cf0b25f660e907fb115765216c4a8.jpg",
+    "https://machine-hub-prod.s3.amazonaws.com/machine-listing-images/7f7959e1567f278cff8c64602c15f494-3defcf7ea9cf03f7c736c3b840bef09f.jpg"
+  ]
+}

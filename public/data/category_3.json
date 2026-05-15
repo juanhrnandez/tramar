@@ -1,0 +1,78 @@
+{
+  "category_id": 3,
+  "category_name": "Mandrinado y Fresado",
+  "category_slug": "3-boring-milling-drilling",
+  "total": 5,
+  "machines": [
+    {
+      "id": "15407",
+      "stock": "15407",
+      "title": "2014 SOUTHWESTERN INDUSTRIES DPMSX3P",
+      "year": "2014",
+      "brand": "SOUTHWESTERN",
+      "model": "INDUSTRIES DPMSX3P",
+      "category_id": 3,
+      "category_name": "Mandrinado y Fresado",
+      "category_slug": "3-boring-milling-drilling",
+      "image_url": null,
+      "machine_slug": "15407/2014-southwestern-industries-dpmsx3p",
+      "specs": {}
+    },
+    {
+      "id": "md69998",
+      "stock": "MD69998",
+      "title": "1998 TOSHIBA MACHINE BTD-110.R16",
+      "year": "1998",
+      "brand": "TOSHIBA",
+      "model": "MACHINE BTD-110.R16",
+      "category_id": 3,
+      "category_name": "Mandrinado y Fresado",
+      "category_slug": "3-boring-milling-drilling",
+      "image_url": "https://machine-hub-prod.s3.amazonaws.com/machine-listing-images/91bf87733c85c6054f3187c9027e7ff2-6f1d38cafa1b83b9915a742f8cb7c8dc.jpg",
+      "machine_slug": "md69998/1998-toshiba-machine-btd-110r16",
+      "specs": {}
+    },
+    {
+      "id": "15005",
+      "stock": "15005",
+      "title": "2012 ACER EVS-3VKH-54",
+      "year": "2012",
+      "brand": "ACER",
+      "model": "EVS-3VKH-54",
+      "category_id": 3,
+      "category_name": "Mandrinado y Fresado",
+      "category_slug": "3-boring-milling-drilling",
+      "image_url": "https://machine-hub-prod.s3.amazonaws.com/machine-listing-images/fd19479b38208dc63188090a08f461b2-e57c5afade509e51324bd5957f1c5df6.jpg",
+      "machine_slug": "15005/2012-acer-evs-3vkh-54",
+      "specs": {}
+    },
+    {
+      "id": "14334",
+      "stock": "14334",
+      "title": "2009 SHARP LMV-42",
+      "year": "2009",
+      "brand": "SHARP",
+      "model": "LMV-42",
+      "category_id": 3,
+      "category_name": "Mandrinado y Fresado",
+      "category_slug": "3-boring-milling-drilling",
+      "image_url": null,
+      "machine_slug": "14334/2009-sharp-lmv-42",
+      "specs": {}
+    },
+    {
+      "id": "12857",
+      "stock": "12857",
+      "title": "2007 GIDDINGS &amp; LEWIS RT-1250",
+      "year": "2007",
+      "brand": "GIDDINGS",
+      "model": "&amp; LEWIS RT-1250",
+      "category_id": 3,
+      "category_name": "Mandrinado y Fresado",
+      "category_slug": "3-boring-milling-drilling",
+      "image_url": null,
+      "machine_slug": "12857/2007-giddings-lewis-rt-1250",
+      "specs": {}
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "category_id": 6,
+  "category_name": "Herramientas e Inspección",
+  "category_slug": "6-inspection-tooling-accessories",
+  "total": 6,
+  "machines": [
+    {
+      "id": "15372",
+      "stock": "15372",
+      "title": "2016 HEXAGON SF 7.10.7",
+      "year": "2016",
+      "brand": "HEXAGON",
+      "model": "SF 7.10.7",
+      "category_id": 6,
+      "category_name": "Herramientas e Inspección",
+      "category_slug": "6-inspection-tooling-accessories",
+      "image_url": null,
+      "machine_slug": "15372/2016-hexagon-sf-7107",
+      "specs": {}
+    },
+    {
+      "id": "k71141",
+      "stock": "K71141",
+      "title": "2011 ZEISS Contura G2 10.12.6. RDS",
+      "year": "2011",
+      "brand": "ZEISS",
+      "model": "Contura G2 10.12.6. RDS",
+      "category_id": 6,
+      "category_name": "Herramientas e Inspección",
+      "category_slug": "6-inspection-tooling-accessories",
+      "image_url": null,
+      "machine_slug": "k71141/2011-zeiss-contura-g2-10126-rds",
+      "specs": {}
+    },
+    {
+      "id": "k43121",
+      "stock": "K43121",
+      "title": "2017 MITUTOYO Crysta-Plus M574",
+      "year": "2017",
+      "brand": "MITUTOYO",
+      "model": "Crysta-Plus M574",
+      "category_id": 6,
+      "category_name": "Herramientas e Inspección",
+      "category_slug": "6-inspection-tooling-accessories",
+      "image_url": null,
+      "machine_slug": "k43121/2017-mitutoyo-crysta-plus-m574",
+      "specs": {}
+    },
+    {
+      "id": "dr25042",
+      "stock": "DR25042",
+      "title": "2017 HEXAGON 7.10.7 SF",
+      "year": "2017",
+      "brand": "HEXAGON",
+      "model": "7.10.7 SF",
+      "category_id": 6,
+      "category_name": "Herramientas e Inspección",
+      "category_slug": "6-inspection-tooling-accessories",
+      "image_url": null,
+      "machine_slug": "dr25042/2017-hexagon-7107-sf",
+      "specs": {}
+    },
+    {
+      "id": "28001",
+      "stock": "28001",
+      "title": "2007 TECNOMAGNETE QPR16633.F1",
+      "year": "2007",
+      "brand": "TECNOMAGNETE",
+      "model": "QPR16633.F1",
+      "category_id": 6,
+      "category_name": "Herramientas e Inspección",
+      "category_slug": "6-inspection-tooling-accessories",
+      "image_url": "https://machine-hub-prod.s3.amazonaws.com/machine-listing-images/d877f2827995cb75c1cb8ea5cc55c0cd-1a02702a948e2b9160ab2e54c5bf5dc2.jpg",
+      "machine_slug": "28001/2007-tecnomagnete-qpr16633f1",
+      "specs": {}
+    },
+    {
+      "id": "dr25019",
+      "stock": "DR25019",
+      "title": "2012 BROWN &amp; SHARPE SF 454",
+      "year": "2012",
+      "brand": "BROWN",
+      "model": "&amp; SHARPE SF 454",
+      "category_id": 6,
+      "category_name": "Herramientas e Inspección",
+      "category_slug": "6-inspection-tooling-accessories",
+      "image_url": "https://machine-hub-prod.s3.amazonaws.com/machine-listing-images/7f7959e1567f278cff8c64602c15f494-3defcf7ea9cf03f7c736c3b840bef09f.jpg",
+      "machine_slug": "dr25019/2012-brown-sharpe-sf-454",
+      "specs": {}
+    }
+  ]
+}

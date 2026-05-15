@@ -1,0 +1,36 @@
+{
+  "id": "k32334",
+  "stock": "K32334",
+  "title": "2014 YOUGAR YGS-43Z",
+  "year": "2014",
+  "brand": "YOUGAR",
+  "model": "YGS-43Z",
+  "category_id": 5,
+  "category_name": "EDM",
+  "category_slug": "5-edm-machines",
+  "image_url": "https://machine-hub-prod.s3.amazonaws.com/machine-listing-images/c532c8500b58418bbf14edd4e346eb43-8fa04725bf087bac966921cdddb429e4.jpg",
+  "machine_slug": "k32334/2014-yougar-ygs-43z",
+  "specs": {
+    "CNC Control": "Yes",
+    "Type Of CNC Control": "35.82\" x 25.59\"",
+    "Max Workpiece Weight": "440 pounds",
+    "X-Axis Travel": "15.74 inches",
+    "Y-Axis Travel": "11.81 inches",
+    "Z-Axis Travel": "15.74 inches",
+    "Electrode Diameter Range": "Φ0.1~ Φ3.0mm"
+  },
+  "description": "The YOUGAR YGS-43Z is an exclusive part of our EDM, SMALL HOLE inventory which we own and service. We're the international CNC specialists with the best guarantee in the industry.",
+  "images": [
+    "https://machine-hub-prod.s3.amazonaws.com/machine-listing-images/c532c8500b58418bbf14edd4e346eb43-8fa04725bf087bac966921cdddb429e4.jpg",
+    "https://machine-hub-prod.s3.amazonaws.com/machine-listing-images/5122e0911552aba6e4380fed2a734146-b36eb85d1e5842ae35e7b5b5fe4e72f8.jpg",
+    "https://machine-hub-prod.s3.amazonaws.com/machine-listing-images/2551fff47df5a2ada83f8c1cb4e530b8-3e3bc07f5bbfde8bc2c52ff2b9e92e4b.jpg",
+    "https://machine-hub-prod.s3.amazonaws.com/machine-listing-images/2e9cf17676a160fc8e5000d4bf513e1b-1e8a50858e9c8dbc9b8fe0f97ac4b6b4.jpg",
+    "https://machine-hub-prod.s3.amazonaws.com/machine-listing-images/b00b7988d44063bb2e2679b452a9c1dd-df3e2c2da0983793176e1bd931efa92e.jpg",
+    "https://machine-hub-prod.s3.amazonaws.com/machine-listing-images/d3eaa790e7c374482a9fb91b51606a92-aef0b3b15d6322bd7b4dbee44759eea4.jpg",
+    "https://machine-hub-prod.s3.amazonaws.com/machine-listing-images/d2d5b139c2d31f6055633cba79228a33-0f36e23fd367b772cd17bf59bec2aeb0.jpg",
+    "https://machine-hub-prod.s3.amazonaws.com/machine-listing-images/e0b8da96bad1458e5d78007b9e2d38c4-2709ccd41af913930b8ad882bce8c61d.jpg",
+    "https://machine-hub-prod.s3.amazonaws.com/machine-listing-images/bb33fbc7e4a865286ce7a66a47a6f74d-e30c8f600399475eeee01a079e124945.jpg",
+    "https://machine-hub-prod.s3.amazonaws.com/machine-listing-images/764a77c4da05adc202532e95728cd221-76f3c9c1806093b8d9a2ca8231565760.jpg",
+    "https://machine-hub-prod.s3.amazonaws.com/machine-listing-images/f812d3fd4ca3f83b8e737665e6733b2d-7caa7222dfef29fe65e03ffbf20e506b.jpg"
+  ]
+}

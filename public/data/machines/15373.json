@@ -1,0 +1,37 @@
+{
+  "id": "15373",
+  "stock": "15373",
+  "title": "2023 MILLUTENSIL BV.30E",
+  "year": "2023",
+  "brand": "MILLUTENSIL",
+  "model": "BV.30E",
+  "category_id": 7,
+  "category_name": "Fabricación y Lámina",
+  "category_slug": "7-fabrication-sheet-metal",
+  "image_url": "https://machine-hub-prod.s3.amazonaws.com/machine-listing-images/960e22c062e54ee98c07ce83a5e39cff-7d2ae64c419e36985c3f35f97e4bfe52.jpg",
+  "machine_slug": "15373/2023-millutensil-bv30e",
+  "specs": {
+    "CNC Control": "Yes",
+    "Type Of CNC Control": "Siemens SMATIC HMI",
+    "Size Of Plates": "59\" x 39.37\"",
+    "Distance Between Columns": "63.38 inches",
+    "Max Load Capacity": "15432 pounds",
+    "Dimensions": "134\" x 107\" 105\"",
+    "Weight": "11200 pounds"
+  },
+  "description": "The MILLUTENSIL BV.30E is an exclusive part of our Presses, Die Tryout & Spotting inventory which we own and service. We're the international CNC specialists with the best guarantee in the industry.",
+  "images": [
+    "https://machine-hub-prod.s3.amazonaws.com/machine-listing-images/960e22c062e54ee98c07ce83a5e39cff-7d2ae64c419e36985c3f35f97e4bfe52.jpg",
+    "https://machine-hub-prod.s3.amazonaws.com/machine-listing-images/b6471d1cab262427295bcf2265742e93-8b0c65cad66348c88af977eebdf5af1f.jpg",
+    "https://machine-hub-prod.s3.amazonaws.com/machine-listing-images/6a25b245110e543aebd8cfba08af5fbe-ed85bd51f1017cfe2b37f069bc5404a9.jpg",
+    "https://machine-hub-prod.s3.amazonaws.com/machine-listing-images/1a01b448690083588db6c9dbc171031a-fc43113fe24d10d16526c1ff6c4312af.jpg",
+    "https://machine-hub-prod.s3.amazonaws.com/machine-listing-images/be3b0b544433b768685e3436621590ff-7d2ae64c419e36985c3f35f97e4bfe52.jpg",
+    "https://machine-hub-prod.s3.amazonaws.com/machine-listing-images/63f3a0d84155cf94b757c01c3c8ba2f8-fc43113fe24d10d16526c1ff6c4312af.jpg",
+    "https://machine-hub-prod.s3.amazonaws.com/machine-listing-images/4186b8943907012bd947930996fe9051-ae93b3e34129fef403288369fc72f7b4.jpg",
+    "https://machine-hub-prod.s3.amazonaws.com/machine-listing-images/c5cd9049085c70f9fd9d9e150333ab6f-fc43113fe24d10d16526c1ff6c4312af.jpg",
+    "https://machine-hub-prod.s3.amazonaws.com/machine-listing-images/29c0b48258b2b2fa504ab937d66478d0-7d2ae64c419e36985c3f35f97e4bfe52.jpg",
+    "https://machine-hub-prod.s3.amazonaws.com/machine-listing-images/9fb240549a5010b386ce6a6879eca1c1-8b0c65cad66348c88af977eebdf5af1f.jpg",
+    "https://machine-hub-prod.s3.amazonaws.com/machine-listing-images/8cf639fc4bb4f35a2bb4105e85ff9957-8b0c65cad66348c88af977eebdf5af1f.jpg",
+    "https://cdn.machinehub.com/machine-listing-images/14722bd8223c8f30d0fd38fd6a8332f1-f2d1d26a8d85f154e2d7eb9d11f5bd41.jpg"
+  ]
+}

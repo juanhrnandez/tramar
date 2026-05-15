@@ -1,0 +1,38 @@
+{
+  "id": "mc12182",
+  "stock": "MC12182",
+  "title": "2021 BELMONT Maxicut MX-246",
+  "year": "2021",
+  "brand": "BELMONT",
+  "model": "Maxicut MX-246",
+  "category_id": 5,
+  "category_name": "EDM",
+  "category_slug": "5-edm-machines",
+  "image_url": "https://machine-hub-prod.s3.amazonaws.com/machine-listing-images/cdd7da5c0696e931cef4d22f7b0cb58c-b38500875182054f542eb096870032c5.jpg",
+  "machine_slug": "mc12182/2021-belmont-maxicut-mx-246",
+  "specs": {
+    "CNC Control": "Yes",
+    "Type Of CNC Control": "Windows Based",
+    "Table Size": "29.5\" x 15.7\"",
+    "Worktank Size": "47.2\" x 27.5\" x 14.9\" H",
+    "Maximum Workpiece Weight": "2860 pounds",
+    "X-Axis Travel": "18.5 inches",
+    "Y-Axis Travel": "14.9 inches",
+    "Z-Axis Travel": "7.2 inches",
+    "Dimensions": "100\" x 74\" x 98\"",
+    "Weight": "4620 pounds"
+  },
+  "description": "The BELMONT Maxicut MX-246 is an exclusive part of our EDM Sinkers inventory which we own and service. We're the international CNC specialists with the best guarantee in the industry.",
+  "images": [
+    "https://machine-hub-prod.s3.amazonaws.com/machine-listing-images/cdd7da5c0696e931cef4d22f7b0cb58c-b38500875182054f542eb096870032c5.jpg",
+    "https://machine-hub-prod.s3.amazonaws.com/machine-listing-images/2bd5e4e70ac82c255d2f51391faa6cc3-985800f8cf9a41b7d869f9c01933ec22.jpg",
+    "https://machine-hub-prod.s3.amazonaws.com/machine-listing-images/70933ed510f3c50e1ebf98ef8c6625c2-975f6a3b6ebfde7e92acd1f51f4aa43b.jpg",
+    "https://machine-hub-prod.s3.amazonaws.com/machine-listing-images/c055e1db0de6afe5077ce09d6e322dc5-c5cb190b1b08c2974d4ffe92a400de21.jpg",
+    "https://cdn.machinehub.com/machine-listing-images/c82a7178ece03ba6ee8051cc36691bdc-d6eb727e71a3e24ad33205d328f3daf3.jpg",
+    "https://cdn.machinehub.com/machine-listing-images/8dc5255e851f83f9e2eb052bc6491596-985800f8cf9a41b7d869f9c01933ec22.jpg",
+    "https://cdn.machinehub.com/machine-listing-images/3f4b1d9d2b6b462288ff6d8ff9e6a5fe-975f6a3b6ebfde7e92acd1f51f4aa43b.jpg",
+    "https://cdn.machinehub.com/machine-listing-images/1d59b579772ecebf86b98688c65277a6-c5cb190b1b08c2974d4ffe92a400de21.jpg",
+    "https://cdn.machinehub.com/machine-listing-images/0608ebde39e83fd8657c80d4edf62f95-6debc0b818e9f6922a2754a7f2865cdd.jpg",
+    "https://cdn.machinehub.com/machine-listing-images/91805c4097ef333db43b8308f8592982-646e7ecff5a3f14176bc9d994fd1ef16.jpg"
+  ]
+}

@@ -33,12 +33,13 @@ type FormData = {
   numero: string;
   correo: string;
   tipoMaquina: string;
+  machineName: string;
 };
 
 type Status = "idle" | "loading" | "success" | "error";
 
 const emptyForm: FormData = {
-  nombre: "", estado: "", empresa: "", numero: "", correo: "", tipoMaquina: "",
+  nombre: "", estado: "", empresa: "", numero: "", correo: "", tipoMaquina: "", machineName: "",
 };
 
 const inputCls =
@@ -58,6 +59,18 @@ export default function ContactSystem() {
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
+  }, []);
+
+  useEffect(() => {
+    const onOpenContact = (e: Event) => {
+      const detail = (e as CustomEvent<{ machine?: string }>).detail;
+      setOpen(true);
+      if (detail?.machine) {
+        setForm((prev) => ({ ...prev, machineName: detail.machine! }));
+      }
+    };
+    window.addEventListener("open-contact", onOpenContact);
+    return () => window.removeEventListener("open-contact", onOpenContact);
   }, []);
 
   useEffect(() => {
@@ -103,20 +116,6 @@ export default function ContactSystem() {
 
   return (
     <>
-      {/* Header trigger */}
-      <button
-        onClick={() => setOpen(true)}
-        className="ml-auto flex flex-col items-end gap-0.5 bg-white/6 border border-[#4a9eff]/25 rounded-xl px-4 py-2 cursor-pointer shrink-0 transition-colors hover:bg-[#4a9eff]/12 hover:border-[#4a9eff]/50"
-        aria-label="Contactar con un especialista"
-      >
-        <span className="text-[#8ab4d8] text-xs leading-tight">
-          ¿No ves lo que buscas?
-        </span>
-        <span className="text-[#4a9eff] text-sm font-bold leading-tight">
-          Contáctanos →
-        </span>
-      </button>
-
       {/* Floating button */}
       <button
         onClick={() => setOpen(true)}
@@ -201,6 +200,27 @@ export default function ContactSystem() {
           ) : (
             /* Form */
             <form onSubmit={handleSubmit} className="flex flex-col gap-4 flex-1">
+
+              {/* Machine context banner */}
+              {form.machineName && (
+                <div className="flex items-center gap-2.5 bg-[#0f3460]/40 border border-[#4a9eff]/25 rounded-xl px-4 py-3">
+                  <svg className="w-4 h-4 text-[#4a9eff] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18" />
+                  </svg>
+                  <div className="min-w-0">
+                    <p className="text-[#6a90be] text-[10px] font-semibold uppercase tracking-widest">Máquina de interés</p>
+                    <p className="text-white text-xs font-semibold truncate">{form.machineName}</p>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={() => setForm((p) => ({ ...p, machineName: "" }))}
+                    className="ml-auto text-white/30 hover:text-white/60 transition-colors text-lg leading-none"
+                    aria-label="Quitar máquina"
+                  >
+                    ×
+                  </button>
+                </div>
+              )}
 
               {/* Trust pill */}
               <div className="flex items-center gap-2 bg-[#4a9eff]/8 border border-[#4a9eff]/20 rounded-xl px-4 py-2.5">

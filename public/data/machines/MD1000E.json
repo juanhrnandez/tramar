@@ -1,0 +1,40 @@
+{
+  "id": "md1000e",
+  "stock": "MD1000E",
+  "title": "2007 SCHMID HSR 1000 Ecoline",
+  "year": "2007",
+  "brand": "SCHMID",
+  "model": "HSR 1000 Ecoline",
+  "category_id": 7,
+  "category_name": "Fabricación y Lámina",
+  "category_slug": "7-fabrication-sheet-metal",
+  "image_url": "https://machine-hub-prod.s3.amazonaws.com/machine-listing-images/a06ebe1b56c3c05196e0d45ff0ad5808-4f751245852f784c29fdb0816ef5a4d2.jpg",
+  "machine_slug": "md1000e/2007-schmid-hsr-1000-ecoline",
+  "specs": {
+    "Tonnage": "1000 tons",
+    "CNC Control": "Yes",
+    "Type Of CNC Control": "Siemens",
+    "Dimensions": "35.43 in x 35.43 in",
+    "Maximum Tool Height": "16.54 in",
+    "Minimum Tool Height": "12.60 in",
+    "Total Force": "100-10000KN",
+    "Stamping Force": "50-4000KN",
+    "Counter Force": "50-1600KN",
+    "Cut Speed": "0.3937–1.5748 in/sec",
+    "Pieces A Minute": "8-18 Pieces",
+    "Cut Stroke": "0–1.18 in",
+    "Total Stroke": "0.079–8.071 in",
+    "Thickness Range": "0.079–0.472 in",
+    "Width Range:": "3.15–20.47 in",
+    "Coil OD Range": "31.50–68.90 in",
+    "Coil ID": "19.69 in",
+    "Max Coil Weight": "13,228 lbs"
+  },
+  "description": "The SCHMID HSR 1000 Ecoline is an exclusive part of our Presses, Fine Blanking inventory which we own and service. We're the international CNC specialists with the best guarantee in the industry.",
+  "images": [
+    "https://machine-hub-prod.s3.amazonaws.com/machine-listing-images/a06ebe1b56c3c05196e0d45ff0ad5808-4f751245852f784c29fdb0816ef5a4d2.jpg",
+    "https://machine-hub-prod.s3.amazonaws.com/machine-listing-images/5674492126dea396ea6a7926493b810d-f50cede757f16d9b5b092a7600c99b0e.jpg",
+    "https://machine-hub-prod.s3.amazonaws.com/machine-listing-images/0c7a625d5077d3baab054e3c91323a77-f50cede757f16d9b5b092a7600c99b0e.jpg",
+    "https://machine-hub-prod.s3.amazonaws.com/machine-listing-images/def405c93fa429646ff5be759b5b9ae8-c594324164674bec1d33dd3708453548.jpg"
+  ]
+}

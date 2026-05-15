@@ -1,0 +1,33 @@
+{
+  "id": "md630e",
+  "stock": "MD630E",
+  "title": "2003 SCHMID HSR 630 Ecoline",
+  "year": "2003",
+  "brand": "SCHMID",
+  "model": "HSR 630 Ecoline",
+  "category_id": 7,
+  "category_name": "Fabricación y Lámina",
+  "category_slug": "7-fabrication-sheet-metal",
+  "image_url": "https://machine-hub-prod.s3.amazonaws.com/machine-listing-images/def405c93fa429646ff5be759b5b9ae8-c594324164674bec1d33dd3708453548.jpg",
+  "machine_slug": "md630e/2003-schmid-hsr-630-ecoline",
+  "specs": {
+    "Tonnage": "630 tons",
+    "CNC Control": "Yes",
+    "Type Of CNC Control": "Siemens",
+    "Maximum Tool Height": "420 millimeters",
+    "Minimum Tool Height": "320 millimeters",
+    "Machine Table Dimensions": "650 millimeters",
+    "Total Force": "50-6300KN",
+    "Stamping Force": "50-3200KN",
+    "Counter Force": "40-1600KN",
+    "Cut Speed": "11-44mm/sec",
+    "Pieces A Minute": "12-27 Pieces",
+    "Cut Stroke": "0-30mm",
+    "Total Stroke": "2mm-205mm"
+  },
+  "description": "The SCHMID HSR 630 Ecoline is an exclusive part of our Presses, Fine Blanking inventory which we own and service. We're the international CNC specialists with the best guarantee in the industry.",
+  "images": [
+    "https://machine-hub-prod.s3.amazonaws.com/machine-listing-images/def405c93fa429646ff5be759b5b9ae8-c594324164674bec1d33dd3708453548.jpg",
+    "https://machine-hub-prod.s3.amazonaws.com/machine-listing-images/a06ebe1b56c3c05196e0d45ff0ad5808-4f751245852f784c29fdb0816ef5a4d2.jpg"
+  ]
+}
