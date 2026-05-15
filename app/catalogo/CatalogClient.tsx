@@ -5,9 +5,13 @@ import Link from "next/link";
 import type { Machine, Category } from "./page";
 import MachineCard, { type CardMachine } from "../components/MachineCard";
 import { useFilterSections } from "./filterSectionsStore";
+import CatalogCTA from "../components/CatalogCTA";
 
 const PAGE_SIZE = 24;
 
+
+
+// ─────────────────────────────────────────────────────────────────────────────
 // ─── Local images for featured machines ──────────────────────────────────────
 const LOCAL_IMAGES: Record<string, string> = {
   "15369": "/2008-doosan-puma-2000SY.jpeg",
@@ -464,8 +468,11 @@ export default function CatalogClient({ initialMachines, categories, detailImage
             ) : (
               <>
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-4 xl:gap-5">
-                  {paginated.map((machine) => (
-                    <MachineCard key={machine.id} machine={toCardMachine(machine, detailImages)} />
+                  {paginated.map((machine, idx) => (
+                    <>
+                      <MachineCard key={machine.id} machine={toCardMachine(machine, detailImages)} />
+                      {idx === Math.floor(paginated.length / 2) - 1 && <CatalogCTA />}
+                    </>
                   ))}
                 </div>
                 <Pagination page={page} total={filtered.length} pageSize={PAGE_SIZE} onChange={goToPage} />

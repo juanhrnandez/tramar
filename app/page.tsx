@@ -3,6 +3,7 @@ import path from "path";
 import Link from "next/link";
 import VisitorTracker from "./components/VisitorTracker";
 import MachineGrid from "./components/MachineGrid";
+import CatalogCTA from "./components/CatalogCTA";
 import type { CardMachine } from "./components/MachineCard";
 
 // ─── Local (high-quality) images for the 10 featured machines ───────────────
@@ -96,7 +97,7 @@ export default function Home() {
         </div>
 
         {/* ── Machine grid ── */}
-        <MachineGrid machines={machines} />
+        <MachineGrid machines={machines} midSlot={<CatalogCTA variant="full" />} midAt={6} />
 
         {/* ── CTA ── */}
         <div className="pt-5 pb-9">

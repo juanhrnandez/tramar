@@ -2,8 +2,8 @@ import { readFileSync, existsSync } from "fs";
 import { join } from "path";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import Link from "next/link";
 import MachineDetailClient from "./MachineDetailClient";
+import type { CardMachine } from "../../components/MachineCard";
 
 type MachineDetail = {
   id: number;
@@ -54,5 +54,34 @@ export default async function MachineDetailPage({ params }: Props) {
   const machine = loadMachine(stock);
   if (!machine) notFound();
 
-  return <MachineDetailClient machine={machine} />;
+  // Load related machines from same category (excluding current), pick 4 at random
+  const related: CardMachine[] = [];
+  try {
+    const allPath = join(process.cwd(), "public/data/machines.json");
+    const all = JSON.parse(readFileSync(allPath, "utf-8"));
+    const pool: CardMachine[] = [];
+    for (const m of all.machines as Array<{
+      stock: string; title: string; year: string | null; brand: string | null;
+      model: string | null; category_name: string; image_url: string | null;
+    }>) {
+      if (m.stock === stock) continue;
+      if (m.category_name !== machine.category_name) continue;
+      const detailPath = join(process.cwd(), "public/data/machines", `${m.stock}.json`);
+      let images: string[] = m.image_url ? [m.image_url] : [];
+      if (existsSync(detailPath)) {
+        const d = JSON.parse(readFileSync(detailPath, "utf-8"));
+        if (Array.isArray(d.images) && d.images.length) images = d.images.slice(0, 5);
+      }
+      if (!images.length) continue;
+      pool.push({ stock: m.stock, title: m.title, year: m.year, brand: m.brand, model: m.model, category_name: m.category_name, images });
+    }
+    // Fisher-Yates shuffle, take 4
+    for (let i = pool.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [pool[i], pool[j]] = [pool[j], pool[i]];
+    }
+    related.push(...pool.slice(0, 4));
+  } catch {}
+
+  return <MachineDetailClient machine={machine} related={related} />;
 }

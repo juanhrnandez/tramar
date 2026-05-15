@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import { useState, useEffect, useRef, useCallback } from "react";
+import MachineCard, { type CardMachine } from "../../components/MachineCard";
+import CatalogCTA from "../../components/CatalogCTA";
 
 const WA_PHONE = "524424674538";
 
@@ -318,7 +320,7 @@ function CTAPanel({ machine }: { machine: MachineDetail }) {
   );
 }
 
-export default function MachineDetailClient({ machine }: { machine: MachineDetail }) {
+export default function MachineDetailClient({ machine, related = [] }: { machine: MachineDetail; related?: CardMachine[] }) {
   const images: string[] = machine.images?.length
     ? machine.images
     : machine.image_url
@@ -375,6 +377,23 @@ export default function MachineDetailClient({ machine }: { machine: MachineDetai
 
         </div>
       </div>
+
+      {/* CTA strip */}
+      <CatalogCTA variant="strip" />
+
+      {/* Related products */}
+      {related.length > 0 && (
+        <div className="max-w-screen-xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
+          <h2 className="text-base font-extrabold text-[#0f1f3d] uppercase tracking-[0.1em] mb-5">
+            Más en {machine.category_name}
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {related.map((m) => (
+              <MachineCard key={m.stock} machine={m} />
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   );
 }
