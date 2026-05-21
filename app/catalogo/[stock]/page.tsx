@@ -39,13 +39,43 @@ function loadMachine(stock: string): MachineDetail | null {
   return all.machines.find((m: MachineDetail) => m.stock === stock) ?? null;
 }
 
+export async function generateStaticParams() {
+  const allPath = join(process.cwd(), "public/data/machines.json");
+  const all = JSON.parse(readFileSync(allPath, "utf-8"));
+  return (all.machines as Array<{ stock: string }>).map((m) => ({ stock: m.stock }));
+}
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { stock } = await params;
   const machine = loadMachine(stock);
   if (!machine) return { title: "Máquina no encontrada" };
+
+  const ogImage =
+    (machine.images && machine.images.length > 0
+      ? machine.images[0]
+      : machine.image_url) ?? undefined;
+
+  const description =
+    machine.description ||
+    `Stock #${machine.stock} – ${machine.category_name}. Solicita cotización directa.`;
+
   return {
     title: `${machine.title} | Tramar Industries`,
-    description: machine.description || `Stock #${machine.stock} – ${machine.category_name}. Solicita cotización directa.`,
+    description,
+    openGraph: {
+      title: `${machine.title} | Tramar Industries`,
+      description,
+      type: "website",
+      ...(ogImage && {
+        images: [{ url: ogImage, width: 800, height: 600, alt: machine.title }],
+      }),
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${machine.title} | Tramar Industries`,
+      description,
+      ...(ogImage && { images: [ogImage] }),
+    },
   };
 }
 
@@ -75,12 +105,11 @@ export default async function MachineDetailPage({ params }: Props) {
       if (!images.length) continue;
       pool.push({ stock: m.stock, title: m.title, year: m.year, brand: m.brand, model: m.model, category_name: m.category_name, images });
     }
-    // Fisher-Yates shuffle, take 4
-    for (let i = pool.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [pool[i], pool[j]] = [pool[j], pool[i]];
+    // Deterministic spread: pick 4 items distributed across the pool
+    const step = Math.max(1, Math.floor(pool.length / 4));
+    for (let i = 0; i < 4 && i * step < pool.length; i++) {
+      related.push(pool[i * step]);
     }
-    related.push(...pool.slice(0, 4));
   } catch {}
 
   return <MachineDetailClient machine={machine} related={related} />;
